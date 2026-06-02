@@ -4,6 +4,7 @@ from streamlit_folium import st_folium
 import geopandas as gpd
 import plotly.express as px
 import pandas as pd
+import os
 
 # ---------------------------------------------------------
 # KONFIGURACJA UI (Premium)
@@ -29,7 +30,8 @@ st.markdown("---")
 # ---------------------------------------------------------
 # 1. BACKEND: ŁADOWANIE DANYCH
 # ---------------------------------------------------------
-plik_geojson = "probka_wydzielen.geojson"
+katalog_biezacy = os.path.dirname(__file__)
+plik_geojson = os.path.join(katalog_biezacy, "probka_wydzielen.geojson")
 
 try:
     dane_lesne = gpd.read_file(plik_geojson)
