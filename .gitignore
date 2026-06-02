@@ -1,0 +1,2 @@
+*.geojson
+push -u -f origin mainprobka_wydzielen.geojson
